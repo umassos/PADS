@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+// The Power monitoring service definition.
+service PowerMonitor {
+  // take the average power of two samples
+  rpc average_power (No_Input) returns (Power_Output) {}
+  // write power value to file
+  rpc write_to_file (Write_Input) returns (Write_Output) {}
+}
+
+// To demonstrate an empty input
+message No_Input {}
+
+message Power_Output {
+  double power_value = 1;
+}
+
+message Write_Input {
+  string file_name = 1;
+  string power_values = 2;
+}
+
+message Write_Output {
+    bool status = 1;
+}

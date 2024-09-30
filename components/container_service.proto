@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+service ContainerService {
+    rpc retrieve_container_core_information (Container_Service_Input) returns (Core_Information_Output) {}
+    rpc retrieve_container_core_usage_limit_information (Container_Service_Input) returns (Core_Usage_Limit_Information_Output) {}
+    rpc retrieve_container_cpu_usage_information (Container_Service_Input) returns (CPU_Usage_Output) {}
+    rpc retrieve_cpu_freq_information (Container_Service_Input) returns (CPU_Freq_Output) {}
+}
+
+message Container_Service_Input {
+    string domain_name = 1;
+}
+
+message Core_Information_Output {
+    int32 number_of_cores = 1;
+}
+
+message Core_Usage_Limit_Information_Output {
+    string core_usage_limit = 1;
+}
+
+message CPU_Usage_Output {
+    double cpu_usage = 1;
+}
+
+message CPU_Freq_Output {
+    double cpu_freq = 1;
+}

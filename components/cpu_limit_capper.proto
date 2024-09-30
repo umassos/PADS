@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+service CpuLimitCapper {
+    rpc limit_core_number (Core_Number_Inputs) returns (Core_Output) {}
+    rpc limit_core_usage (Core_Usage_Inputs) returns (Core_Output) {}
+}
+
+message Core_Number_Inputs {
+    string domain_name = 1;
+    int32 number_of_cores = 2;
+}
+
+message Core_Usage_Inputs {
+    string domain_name = 1;
+    int32 core_usage_limit = 2;
+}
+
+message Core_Output {
+    bool status = 1;
+}

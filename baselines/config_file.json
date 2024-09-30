@@ -1,0 +1,26 @@
+{
+    "system_configs":
+        {
+            "recording_frequency": 15,
+            "min_cpu_quota": 10,
+            "max_cpu_quota": 100,
+            "number_of_cpu_sockets": 2,
+            "mediawiki_sub_path": "/gw",
+            "rt_percentile": 95.0,
+            "cluster_size": 1,
+            "high_threshold": 0.98,
+            "low_threshold": 0.96,
+            "hard_multiplier": 0.01,
+            "soft_multiplier": 0.75,
+            "low_threshold_activeness_duration": 30,
+            "sampling_time": 1,
+            "blast_sampling_time": 20,
+            "min_power": 30,
+            "max_power": 92,
+            "min_core": 1,
+            "max_core": 16,
+            "blast_min_core": 1,
+            "blast_min_quota": 1,
+            "unthrottle_ratio": 0.2
+        }
+}
